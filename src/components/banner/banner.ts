@@ -12,7 +12,12 @@ class Banner extends HTMLElement {
 		this.render();
 	}
 
+	attributeChangedCallback(propName, oldvlue, newValue) {
+		this[propName] = newValue;
+	}
+
 	render() {
+		//QUEMANDO CONTENIDO!!
 		if (this.shadowRoot)
 			this.shadowRoot.innerHTML = `
           <section class="banner-section">
