@@ -1,24 +1,24 @@
 {
-  "name": "melody",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abejitallorona/Melody-code.git"
-  },
-  "author": "María José Rodríguez, Laura Palacio",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abejitallorona/Melody-code/issues"
-  },
-  "homepage": "https://github.com/abejitallorona/Melody-code#readme",
-  "devDependencies": {
-    "mocha": "^10.3.0",
-    "nodemon": "^3.1.0",
-    "serve": "^14.2.1"
-  }
+	"name": "melody",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "serve"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/abejitallorona/Melody-code.git"
+	},
+	"author": "María José Rodríguez, Laura Palacio",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/abejitallorona/Melody-code/issues"
+	},
+	"homepage": "https://github.com/abejitallorona/Melody-code#readme",
+	"devDependencies": {
+		"mocha": "^10.3.0",
+		"nodemon": "^3.1.0",
+		"serve": "^14.2.1"
+	}
 }
