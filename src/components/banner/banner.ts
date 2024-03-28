@@ -13,7 +13,7 @@ class Banner extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		const attrs: Record<Attribute, null> = {
+		const attrs: Record<Attributes, null> = {
 			Username: null,
 			ProfilePicture: null,
 		};
