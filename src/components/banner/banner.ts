@@ -26,7 +26,7 @@ class Banner extends HTMLElement {
 
 	attributeChangedCallback(propName: string, oldValue: string | null, newValue: string | null) {
 		if (newValue !== null) {
-			this[propName] = newValue;
+			// this[propName] = newValue;
 		}
 	}
 
