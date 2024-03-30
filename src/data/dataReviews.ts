@@ -1,4 +1,15 @@
-const Reviews = [
+interface ReviewsShape {
+	nameAndArtist: string;
+	typeAndYear: string;
+	albumPicture: string;
+	userPicture: string;
+	username: string;
+	review: string;
+	likes: number;
+	comments: number;
+}
+
+export const Reviews: ReviewsShape[] = [
 	{
 		nameAndArtist: 'Setlle-Disclosure',
 		typeAndYear: 'Album-2013',
@@ -7,8 +18,8 @@ const Reviews = [
 		username: 'Laura Palacio',
 		review:
 			"Disclosure's  Settle is an electrifying masterpiece that seamlessly blends house, garage, and pop elements, creating a sonic experience that feels both nostalgic and groundbreaking. From the infectious beats of  Latch  to the soulful vocals on White Noise, each track is a journey in itself The duo's production prowess shines through, with tight rhythms, catchy hooks, and a keen sense of melody F For You and When a Fire Starts to Burn showcase their ability to craft club anthems that still resonate with depth The collaboration with talented vocalists adds another layer, elevating the album to a truly immersive experience...",
-		likes: '127',
-		comments: '236',
+		likes: 127,
+		comments: 236,
 	},
 	{
 		nameAndArtist: 'Setlle-Disclosure',
@@ -18,8 +29,8 @@ const Reviews = [
 		username: 'Laura Palacio',
 		review:
 			"Disclosure's  Settle is an electrifying masterpiece that seamlessly blends house, garage, and pop elements, creating a sonic experience that feels both nostalgic and groundbreaking. From the infectious beats of  Latch  to the soulful vocals on White Noise, each track is a journey in itself The duo's production prowess shines through, with tight rhythms, catchy hooks, and a keen sense of melody F For You and When a Fire Starts to Burn showcase their ability to craft club anthems that still resonate with depth The collaboration with talented vocalists adds another layer, elevating the album to a truly immersive experience...",
-		likes: '127',
-		comments: '236',
+		likes: 127,
+		comments: 36,
 	},
 	{
 		nameAndArtist: 'Setlle-Disclosure',
@@ -29,7 +40,7 @@ const Reviews = [
 		username: 'Laura Palacio',
 		review:
 			"Disclosure's  Settle is an electrifying masterpiece that seamlessly blends house, garage, and pop elements, creating a sonic experience that feels both nostalgic and groundbreaking. From the infectious beats of  Latch  to the soulful vocals on White Noise, each track is a journey in itself The duo's production prowess shines through, with tight rhythms, catchy hooks, and a keen sense of melody F For You and When a Fire Starts to Burn showcase their ability to craft club anthems that still resonate with depth The collaboration with talented vocalists adds another layer, elevating the album to a truly immersive experience...",
-		likes: '127',
-		comments: '236',
+		likes: 127,
+		comments: 6,
 	},
 ];
