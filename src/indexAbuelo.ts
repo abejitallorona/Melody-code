@@ -1,4 +1,5 @@
 import { Profiles } from './data/dataProfiles';
+import styles from './indexAbuelo.css';
 import './components/indexPadre';
 import { Banner, Attribute } from './components/banner/banner';
 import { WelcomeMessage, Attribute1 } from './components/welcomeMessage/welcomeMessage';
