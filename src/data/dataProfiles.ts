@@ -6,7 +6,7 @@ interface ProfilesShape {
 
 export const Profiles: ProfilesShape[] = [
 	{
-		Nickname: 'LAURIX',
+		Nickname: 'LAU',
 		Fullname: 'Laura Palacio',
 		ProfilePicture: 'https://i.pinimg.com/564x/0c/dc/42/0cdc42ae52de52c6ebc16f1f23b3dabd.jpg',
 	},

@@ -1,0 +1,35 @@
+.welcome-message {
+	text-align: center;
+}
+
+.welcome-message h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.welcome-message h2 span {
+	background: linear-gradient(45deg, #ff4079, #ffd5ad);
+	-webkit-text-fill-color: transparent;
+	font-family: Yeseva One, sans-serif;
+}
+
+.welcome-message h4 {
+	font-size: 16px;
+	margin-top: 30px;
+	font-weight: normal;
+}
+
+#add-entry-button {
+	background-color: #ff4079;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add-entry-button:hover {
+	background-color: #f92b6d;
+}
