@@ -1,10 +1,10 @@
 import { Profiles } from './data/dataProfiles';
 import './components/indexPadre';
-import Banner, { Attribute } from './components/banner/banner';
+import MyBanner, { Attribute } from './components/banner/banner';
 
 //Crear el App container
 class AppContainer extends HTMLElement {
-	banner: Banner[] = [];
+	banner: MyBanner[] = [];
 
 	constructor() {
 		super();
@@ -12,10 +12,12 @@ class AppContainer extends HTMLElement {
 
 		Profiles.forEach((user) => {
 			//Crear el componente
-			const bannerCard = this.ownerDocument.createElement('my-banner') as Banner;
+			const bannerCard = this.ownerDocument.createElement('my-banner') as MyBanner;
 			//Asignar propiedades/atributos al componente
-			bannerCard.setAttribute(Attribute.Nickname, user.Nickname);
-			bannerCard.setAttribute(Attribute.ProfilePicture, user.ProfilePicture);
+			bannerCard.Nickname = user.Nickname;
+			bannerCard.ProfilePicture = user.ProfilePicture;
+			// bannerCard.setAttribute(Attribute.Nickname, user.Nickname);
+			// bannerCard.setAttribute(Attribute.ProfilePicture, user.ProfilePicture);
 			//Agregarlo al arreglo de perfiles
 			this.banner.push(bannerCard);
 		});

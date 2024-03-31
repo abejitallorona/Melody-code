@@ -28,10 +28,16 @@ class Banner extends HTMLElement {
 		this.render();
 	}
 
-	attributeChangedCallback(propName: Attribute, oldValue: string | undefined, newValue: string | undefined) {
-		switch (propName as Attribute) {
+	attributeChangedCallback(propName: string, oldValue: string | undefined, newValue: string | undefined) {
+		switch (propName) {
+			case Attribute.Nickname:
+				this.Nickname = newValue;
+				break;
+			case Attribute.ProfilePicture:
+				this.ProfilePicture = newValue;
+				break;
 			default:
-				this[propName] = newValue;
+				break;
 		}
 		this.render();
 	}
@@ -40,18 +46,21 @@ class Banner extends HTMLElement {
 		// Agregar el contenido HTML
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
-              <section class="top-banner">
-							<div>${this.ProfilePicture}</div>
-                  <h3>${this.Nickname}</h3>
-									<img src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
-                  <form id="search-form">
-                      <input type="text" name="search" placeholder="Search...">
-                      <button type="submit">Search</button>
-                  </form>
-              </section>
-          `;
+				<section class="top-banner">
+					<div>
+						<img src="${this.ProfilePicture}" alt="Profile Picture">
+					</div>
+					<h3>${this.Nickname}</h3>
+					<img src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
+					<form id="search-form">
+						<input type="text" name="search" placeholder="Search...">
+						<button type="submit">Search</button>
+					</form>
+				</section>
+			`;
 		}
 	}
 }
+
 export default Banner;
 customElements.define('my-banner', Banner);
