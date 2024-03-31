@@ -1,14 +1,31 @@
 const path = require('path');
 
 module.exports = {
-	entry: './src/indexAbuelo.ts',
+	entry: './src/indexabuelo.ts',
+	mode: 'development',
 	module: {
 		rules: [
+			{
+				test: /\.css$/i,
+				use: ['css-loader'],
+			},
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader',
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'images',
+						},
+					},
+				],
+			},
+			,
 		],
 	},
 	resolve: {

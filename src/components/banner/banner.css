@@ -1,0 +1,61 @@
+:host {
+	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
+	margin: 0; /* Eliminar el margen predeterminado */
+}
+
+.top-banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(to right, #ff4079, #ffd5ad);
+	padding: 10px;
+	border-radius: 0;
+	height: 150px;
+	margin-top: 0; /* Eliminar el margen superior */
+}
+
+.Profile-Picture {
+	width: 100px;
+	height: 100px;
+	border: 3px solid #ffd5ad;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.top-banner h3 {
+	font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+	color: #2b0a24; /* Color del texto */
+}
+
+#logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+}
+
+#search-form {
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+#search-form input[type='text'] {
+	flex: 1;
+	padding: 8px;
+	border: none;
+	border-radius: 20px;
+}
+
+#search-form::after {
+	content: '\1F50D';
+	font-size: 1.5rem;
+	padding: 8px;
+	color: #fff;
+	cursor: pointer;
+	background-color: #ffd5ad;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}

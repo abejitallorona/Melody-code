@@ -1,3 +1,4 @@
+import styles from './banner.css';
 //Plantilla para componentes: enum: definir constantes con nombres
 export enum Attribute {
 	'Nickname' = 'Nickname',
@@ -46,15 +47,17 @@ class Banner extends HTMLElement {
 		// Agregar el contenido HTML
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
+				<style>
+					${styles}
+				</style>
 				<section class="top-banner">
 					<div>
-						<img src="${this.ProfilePicture}" alt="Profile Picture">
+						<img class="Profile-Picture" src="${this.ProfilePicture}" alt="Profile Picture">
 					</div>
 					<h3>${this.Nickname}</h3>
-					<img src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
+					<img id="logo" src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png">
 					<form id="search-form">
 						<input type="text" name="search" placeholder="Search...">
-						<button type="submit">Search</button>
 					</form>
 				</section>
 			`;
