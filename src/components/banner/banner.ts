@@ -1,10 +1,11 @@
-export enum Attributes {
-	'Username' = 'Username',
+//Plantilla para componentes: enum: definir constantes con nombres
+export enum Attribute {
+	'Nickname' = 'Nickname',
 	'ProfilePicture' = 'ProfilePicture',
 }
 
 class Banner extends HTMLElement {
-	Username?: string;
+	Nickname?: string;
 	ProfilePicture?: string;
 
 	constructor() {
@@ -12,32 +13,37 @@ class Banner extends HTMLElement {
 		this.attachShadow({ mode: 'open' });
 	}
 
+	//Método de observar los atributos
+	//return ["Nickname", "ProfilePicture"]
 	static get observedAttributes() {
-		const attrs: Record<Attributes, null> = {
-			Username: null,
+		const attrs: Record<Attribute, null> = {
+			//Record: trabajar con las variables que no tienen valor
+			Nickname: null,
 			ProfilePicture: null,
 		};
-		return Object.keys(attrs);
+		return Object.keys(attrs); //acceder a los keys del objeto (key: izquierda, valores: derecha)
 	}
 
 	connectedCallback() {
 		this.render();
 	}
 
-	attributeChangedCallback(propName: string, oldValue: string | null, newValue: string | null) {
-		if (newValue !== null) {
-			// this[propName] = newValue;
+	attributeChangedCallback(propName: Attribute, oldValue: string | undefined, newValue: string | undefined) {
+		switch (propName as Attribute) {
+			default:
+				this[propName] = newValue;
 		}
+		this.render();
 	}
 
 	render() {
 		// Agregar el contenido HTML
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
-              <section class="banner-section">
-                  <img src="https://i.pinimg.com/564x/0c/dc/42/0cdc42ae52de52c6ebc16f1f23b3dabd.jpg">
-                  <h3>${this.Username}</h3>
-                  <img src="https://co.pinterest.com/pin/703265298091791024">
+              <section class="top-banner">
+							<div>${this.ProfilePicture}</div>
+                  <h3>${this.Nickname}</h3>
+									<img src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
                   <form id="search-form">
                       <input type="text" name="search" placeholder="Search...">
                       <button type="submit">Search</button>
@@ -48,4 +54,4 @@ class Banner extends HTMLElement {
 	}
 }
 export default Banner;
-customElements.define('banner', Banner);
+customElements.define('my-banner', Banner);
