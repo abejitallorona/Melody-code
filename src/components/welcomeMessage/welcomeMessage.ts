@@ -34,16 +34,19 @@ export class WelcomeMessage extends HTMLElement {
 	render() {
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
-        <style>
-          ${styles}
-        </style>
-        <section class="welcome-message">
-          <h2>Welcome ${this.Fullname}. Here is what we've been listening...</h2>
+      <style>
+      ${styles}
+  </style>
+  <section class="welcome-message">
+      <h2>Welcome ${this.Fullname}. Here is what we've been listening...</h2>
+      <div class="additional-content">
           <h4>Your Friends Have Said</h4>
           <button id="add-entry-button">
-            Add Entry <span>&#43;</span>
+              Add Entry <span>&#43;</span>
           </button>
-        </section>
+      </div>
+      <div class="bottom-line"></div>
+  </section>
       `;
 		}
 	}
