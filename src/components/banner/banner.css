@@ -1,4 +1,4 @@
-:host {
+* {
 	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
 	margin: 0; /* Eliminar el margen predeterminado */
 }
@@ -7,23 +7,30 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: linear-gradient(to right, #ff4079, #ffd5ad);
+	border-radius: 0.625rem;
+	background: linear-gradient(140deg, #ff4079 21.7%, #ffd5ad 78.56%);
 	padding: 10px;
-	border-radius: 0;
-	height: 150px;
-	margin-top: 0; /* Eliminar el margen superior */
+	height: 50px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .Profile-Picture {
-	width: 100px;
-	height: 100px;
+	height: 50px;
+	width: 50px;
 	border: 3px solid #ffd5ad;
 	border-radius: 50%;
+	margin-left: 5px;
 	margin-right: 10px;
+	margin-top: 5px;
 }
 
 .top-banner h3 {
-	font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+	font-size: 1rem; /* Tamaño de fuente más pequeño */
 	color: #2b0a24; /* Color del texto */
 }
 
@@ -31,7 +38,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100px;
+	height: 65px;
+	margin-top: 8px;
 }
 
 #search-form {
