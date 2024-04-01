@@ -1,3 +1,4 @@
-* {
+body {
 	background-color: black;
+	color: white; /* Cambiar el color del texto para que se vea mejor en un fondo negro */
 }

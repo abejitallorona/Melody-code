@@ -118,6 +118,10 @@ class AppContainer extends HTMLElement {
 			spotifyLogoImg.alt = 'Spotify Logo';
 			spotifyLogoImg.classList.add('spotify-logo');
 			this.shadowRoot?.appendChild(spotifyLogoImg);
+
+			const cssAbuelo = this.ownerDocument.createElement('styles');
+			cssAbuelo.innerHTML = styles;
+			this.shadowRoot?.appendChild(cssAbuelo);
 		}
 	}
 }
