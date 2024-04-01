@@ -55,7 +55,7 @@ class Banner extends HTMLElement {
 						<img class="Profile-Picture" src="${this.ProfilePicture}" alt="Profile Picture">
 						<h3>${this.Nickname}</h3>
 					</div>
-					<img id="logo" src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
+					<img id="logo" src="https://i.imgur.com/lvK6X2s.png">
 					<form id="search-form">
 						<input type="text" name="search" placeholder="Search...">
 					</form>
