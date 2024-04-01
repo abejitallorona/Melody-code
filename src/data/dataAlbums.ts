@@ -5,8 +5,9 @@ interface AlbumsShape {
 }
 
 export const Albums: AlbumsShape[] = [
-	{ albumCover: 'https://i.scdn.co/image/ab67616d0000b27382877ed8854250100fb4a3f1', views: '68k', likes: '37k' },
-	{ albumCover: 'https://i.scdn.co/image/ab67616d0000b27382877ed8854250100fb4a3f1', views: '68k', likes: '37k' },
-	{ albumCover: 'https://i.scdn.co/image/ab67616d0000b27382877ed8854250100fb4a3f1', views: '68k', likes: '37k' },
-	{ albumCover: 'https://i.scdn.co/image/ab67616d0000b27382877ed8854250100fb4a3f1', views: '68k', likes: '37k' },
+	{
+		albumCover: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png',
+		views: '68',
+		likes: '37',
+	},
 ];

@@ -1,3 +1,4 @@
+// indexabuelo.ts
 import { Profiles } from './data/dataProfiles';
 import styles from './indexAbuelo.css';
 import './components/indexPadre';
@@ -5,12 +6,15 @@ import { Banner, Attribute } from './components/banner/banner';
 import { WelcomeMessage, Attribute1 } from './components/welcomeMessage/welcomeMessage';
 import { Review, Attribute2 } from './components/review-card/review-card';
 import { Reviews } from './data/dataReviews';
+import { Albums } from './data/dataAlbums';
+import { Albumslog, Attribute3 } from './components/albums/albums'; // <--- Importa Albumslog y Attribute3
 
 // Crear el App container
 class AppContainer extends HTMLElement {
 	banner: Banner[] = [];
 	welcomeMessage: WelcomeMessage;
 	Review: Review[] = [];
+	Albumslog: Albumslog[] = [];
 
 	constructor() {
 		super();
@@ -28,9 +32,19 @@ class AppContainer extends HTMLElement {
 		this.welcomeMessage = this.ownerDocument.createElement('my-welcome-message') as WelcomeMessage;
 		this.welcomeMessage.Fullname = Profiles[0].Fullname; // Asignar el nombre del primer usuario en la lista de perfiles
 
+		// Crear el componente Review
 		Reviews.forEach((review) => {
 			const reviewCard = this.ownerDocument.createElement('my-review') as Review;
-			// Asignar directamente los valores a las propiedades del componente
+			//atributos de review
+			// reviewCard.setAttribute('nameAndArtist', review.nameAndArtist);
+			// reviewCard.setAttribute('typeAndYear ', review.typeAndYear);
+			// reviewCard.setAttribute('albumPicture ', review.albumPicture);
+			// reviewCard.setAttribute('userPicture  ', review.userPicture);
+			// reviewCard.setAttribute('username ', review.username);
+			// reviewCard.setAttribute('review ', review.review);
+			// reviewCard.setAttribute('likes ', String(review.likes));
+			// reviewCard.setAttribute('comments', String(review.comments));
+
 			reviewCard.nameAndArtist = review.nameAndArtist;
 			reviewCard.typeAndYear = review.typeAndYear;
 			reviewCard.albumPicture = review.albumPicture;
@@ -41,6 +55,19 @@ class AppContainer extends HTMLElement {
 			reviewCard.comments = review.comments;
 
 			this.Review.push(reviewCard);
+		});
+
+		// Crear el componente Albumslog
+		Albums.forEach((album) => {
+			const albumcard = this.ownerDocument.createElement('my-albums') as Albumslog;
+
+			// Establecer los atributos del componente
+			// albumcard.setAttribute('albumCover', album.albumCover);
+			albumcard.albumCover = album.albumCover;
+			albumcard.setAttribute('views', String(album.views));
+			albumcard.setAttribute('likes', String(album.likes));
+
+			this.Albumslog.push(albumcard);
 		});
 	}
 
@@ -59,6 +86,10 @@ class AppContainer extends HTMLElement {
 			// Agregar el componente Review al shadowRoot
 			this.Review.forEach((review) => {
 				this.shadowRoot?.appendChild(review);
+			});
+			// Agregar el componente Albumslog al shadowRoot
+			this.Albumslog.forEach((album) => {
+				this.shadowRoot?.appendChild(album);
 			});
 		}
 	}

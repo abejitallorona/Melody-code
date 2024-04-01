@@ -1,10 +1,10 @@
-export enum Attributes {
+export enum Attribute3 {
 	'albumCover' = 'albumCover',
 	'views' = 'views',
 	'likes' = 'likes',
 }
 
-class Albums extends HTMLElement {
+export class Albumslog extends HTMLElement {
 	albumCover?: string;
 	views?: number;
 	likes?: number;
@@ -15,7 +15,7 @@ class Albums extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		const attrs: Record<Attributes, null> = {
+		const attrs: Record<Attribute3, null> = {
 			albumCover: null,
 			views: null,
 			likes: null,
@@ -27,24 +27,35 @@ class Albums extends HTMLElement {
 		this.render();
 	}
 
-	attributeChangedCallback(propName: string, oldValue: string | null, newValue: string | null) {
-		if (newValue !== null) {
-			// this[propName] = newValue;
+	attributeChangedCallback(propName: Attribute3, oldValue: string | undefined, newValue: string | undefined) {
+		switch (propName) {
+			case Attribute3.views:
+				this.views = newValue ? Number(newValue) : undefined;
+				break;
+
+			case Attribute3.likes:
+				this.likes = newValue ? Number(newValue) : undefined;
+				break;
+
+			default:
+				this[propName] = newValue;
+				break;
 		}
+		this.render();
 	}
 
 	render() {
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
               <section class="popular__albums">
-                  <img src="${this.albumCover}">
+							<div>
+							<img class="Album-Cover" src="${this.albumCover}" alt="Album Cover">
+              </div>
                   <p>${this.views}</p>
                   <p>${this.likes}</p>
-
               </section>
           `;
 		}
 	}
 }
-export default Albums;
-customElements.define('albums', Albums);
+customElements.define('my-albums', Albumslog);
