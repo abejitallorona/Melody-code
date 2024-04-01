@@ -3,11 +3,14 @@ import styles from './indexAbuelo.css';
 import './components/indexPadre';
 import { Banner, Attribute } from './components/banner/banner';
 import { WelcomeMessage, Attribute1 } from './components/welcomeMessage/welcomeMessage';
+import { Review, Attribute2 } from './components/review-card/review-card';
+import { Reviews } from './data/dataReviews';
 
 // Crear el App container
 class AppContainer extends HTMLElement {
 	banner: Banner[] = [];
 	welcomeMessage: WelcomeMessage;
+	Review: Review[] = [];
 
 	constructor() {
 		super();
@@ -24,6 +27,21 @@ class AppContainer extends HTMLElement {
 		// Crear el componente WelcomeMessage
 		this.welcomeMessage = this.ownerDocument.createElement('my-welcome-message') as WelcomeMessage;
 		this.welcomeMessage.Fullname = Profiles[0].Fullname; // Asignar el nombre del primer usuario en la lista de perfiles
+
+		Reviews.forEach((review) => {
+			const reviewCard = this.ownerDocument.createElement('my-review') as Review;
+			// Asignar directamente los valores a las propiedades del componente
+			reviewCard.nameAndArtist = review.nameAndArtist;
+			reviewCard.typeAndYear = review.typeAndYear;
+			reviewCard.albumPicture = review.albumPicture;
+			reviewCard.userPicture = review.userPicture;
+			reviewCard.username = review.username;
+			reviewCard.review = review.review;
+			reviewCard.likes = review.likes;
+			reviewCard.comments = review.comments;
+
+			this.Review.push(reviewCard);
+		});
 	}
 
 	connectedCallback() {
@@ -38,6 +56,10 @@ class AppContainer extends HTMLElement {
 			});
 			// Agregar el componente WelcomeMessage al shadowRoot
 			this.shadowRoot.appendChild(this.welcomeMessage);
+			// Agregar el componente Review al shadowRoot
+			this.Review.forEach((review) => {
+				this.shadowRoot?.appendChild(review);
+			});
 		}
 	}
 }

@@ -13,7 +13,10 @@ export class WelcomeMessage extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return [Attribute1.Fullname];
+		const attrs: Record<Attribute1, null> = {
+			Fullname: null,
+		};
+		return Object.keys(attrs);
 	}
 
 	connectedCallback() {

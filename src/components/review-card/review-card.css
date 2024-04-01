@@ -1,0 +1,46 @@
+.review__card {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.Album-Picture {
+	width: 200px; /* Ajusta el tamaño según sea necesario */
+	height: auto;
+	margin-right: 20px;
+}
+
+.card--title {
+	font-family: 'Fredoka One', sans-serif;
+	margin-bottom: 10px;
+}
+
+.card--title h1 {
+	margin: 0;
+}
+
+.User-Picture {
+	width: 50px; /* Ajusta el tamaño según sea necesario */
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid #ff4079;
+	margin-right: 10px;
+}
+
+.card--user h3 {
+	font-family: 'Fredoka One', sans-serif;
+	margin: 0;
+}
+
+.card--review {
+	margin-bottom: 10px;
+}
+
+.card--like p {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.card--like i {
+	margin-right: 5px;
+}

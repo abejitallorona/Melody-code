@@ -15,7 +15,11 @@ export class Banner extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return [Attribute.Nickname, Attribute.ProfilePicture];
+		const attrs: Record<Attribute, null> = {
+			Nickname: null,
+			ProfilePicture: null,
+		};
+		return Object.keys(attrs);
 	}
 
 	connectedCallback() {
