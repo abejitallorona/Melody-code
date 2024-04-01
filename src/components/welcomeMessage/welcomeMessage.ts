@@ -41,14 +41,16 @@ export class WelcomeMessage extends HTMLElement {
       ${styles}
   </style>
   <section class="welcome-message">
-      <h2>Welcome ${this.Fullname}. Here is what we've been listening...</h2>
-      <div class="additional-content">
-          <h4>Your Friends Have Said</h4>
+	<div class="message__user">
+      <h2>Welcome ${this.Fullname}. Here is what we've been listening...</h2></div>
+
+			<div class="additional-content">
+          <P>YOUR FRIENDS HAVE SAID</P>
           <button id="add-entry-button">
               Add Entry <span>&#43;</span>
           </button>
-      </div>
-      <div class="bottom-line"></div>
+					</div>
+					<div class="bottom-line"></div>
   </section>
       `;
 		}
