@@ -1,3 +1,4 @@
+import styles from './albums.css';
 export enum Attribute3 {
 	'albumCover' = 'albumCover',
 	'views' = 'views',
@@ -47,6 +48,9 @@ export class Albumslog extends HTMLElement {
 	render() {
 		if (this.shadowRoot) {
 			this.shadowRoot.innerHTML = `
+			<style>
+			${styles}
+		</style>
               <section class="popular__albums">
 							<div>
 							<img class="Album-Cover" src="${this.albumCover}" alt="Album Cover">
