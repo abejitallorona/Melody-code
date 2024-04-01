@@ -51,11 +51,11 @@ class Banner extends HTMLElement {
 					${styles}
 				</style>
 				<section class="top-banner">
-					<div>
+					<div class= "user">
 						<img class="Profile-Picture" src="${this.ProfilePicture}" alt="Profile Picture">
+						<h3>${this.Nickname}</h3>
 					</div>
-					<h3>${this.Nickname}</h3>
-					<img id="logo" src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png">
+					<img id="logo" src="https://i.pinimg.com/736x/31/d6/f2/31d6f299936413ce0ec3bc99d57cb7db.jpg">
 					<form id="search-form">
 						<input type="text" name="search" placeholder="Search...">
 					</form>
