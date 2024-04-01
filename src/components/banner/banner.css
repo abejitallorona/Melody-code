@@ -1,13 +1,12 @@
 * {
 	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
-	margin: 0; /* Eliminar el margen predeterminado */
+	margin: 0;
 }
 
 .top-banner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-radius: 0.625rem;
 	background: linear-gradient(140deg, #ff4079 21.7%, #ffd5ad 78.56%);
 	padding: 10px;
 	height: 50px;

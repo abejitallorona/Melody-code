@@ -74,54 +74,59 @@ class AppContainer extends HTMLElement {
 
 	render() {
 		if (this.shadowRoot) {
-			// Agregar el componente Banner al shadowRoot
+			this.shadowRoot.innerHTML = `<style>${styles}</style>`;
+
+			//Elemento container que va a contener los componentes
+			const container = this.ownerDocument.createElement('main');
+			container.className = 'container';
+
+			// Agregar el componente Banner al container
 			this.banner.forEach((banner) => {
-				this.shadowRoot?.appendChild(banner);
+				container.appendChild(banner);
 			});
 
-			// Agregar el componente WelcomeMessage al shadowRoot
-			this.shadowRoot.appendChild(this.welcomeMessage);
+			// Agregar el componente WelcomeMessage al container
+			container.appendChild(this.welcomeMessage);
 
-			// Agregar el componente Review al shadowRoot
+			// Agregar el componente Review al container
 			this.Review.forEach((review, index) => {
-				this.shadowRoot?.appendChild(review);
+				container.appendChild(review);
 
-				// Agregar una línea al final de todos los componentes de Review
+				// Agregar una línea al final de todos los componentes de Review al container
 				if (index === this.Review.length - 1) {
 					const hrReviewFinal = document.createElement('hr');
 					hrReviewFinal.classList.add('separator-line');
-					this.shadowRoot?.appendChild(hrReviewFinal);
+					container.appendChild(hrReviewFinal);
 				}
 			});
 
-			// Crear el texto "Popular Albums this week"
+			// Crear el texto "Popular Albums this week" y agregar al container
 			const popularAlbumsText = document.createElement('h4');
 			popularAlbumsText.textContent = 'Popular Albums this week';
 			popularAlbumsText.classList.add('popular-albums-text');
-			this.shadowRoot?.appendChild(popularAlbumsText);
+			container.appendChild(popularAlbumsText);
 
-			// Agregar el componente Albumslog al shadowRoot
+			// Agregar el componente Albumslog al container
 			this.Albumslog.forEach((album) => {
-				this.shadowRoot?.appendChild(album);
+				container.appendChild(album);
 			});
 
-			// Agregar el texto "powered by Spotify"
+			// Agregar el texto "powered by Spotify" al container
 			const poweredByText = document.createElement('p');
 			poweredByText.textContent = 'Powered by Spotify';
 			poweredByText.classList.add('powered-by-text');
-			this.shadowRoot?.appendChild(poweredByText);
+			container.appendChild(poweredByText);
 
-			// Agregar la imagen del logo de Spotify
+			// Agregar la imagen del logo de Spotify al container
 			const spotifyLogoImg = document.createElement('img');
 			spotifyLogoImg.src =
 				'https://static.vecteezy.com/system/resources/previews/023/986/494/original/spotify-logo-spotify-logo-transparent-spotify-icon-transparent-free-free-png.png';
 			spotifyLogoImg.alt = 'Spotify Logo';
 			spotifyLogoImg.classList.add('spotify-logo');
-			this.shadowRoot?.appendChild(spotifyLogoImg);
+			container.appendChild(spotifyLogoImg);
 
-			const cssAbuelo = this.ownerDocument.createElement('styles');
-			cssAbuelo.innerHTML = styles;
-			this.shadowRoot?.appendChild(cssAbuelo);
+			//agregar el container con todo al shadowroot
+			this.shadowRoot.appendChild(container);
 		}
 	}
 }
