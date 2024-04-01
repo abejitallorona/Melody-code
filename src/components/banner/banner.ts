@@ -47,11 +47,11 @@ export class Banner extends HTMLElement {
           ${styles}
         </style>
         <section class="top-banner">
-          <div>
+          <div class="user">
             <img class="Profile-Picture" src="${this.ProfilePicture}" alt="Profile Picture">
+						<h3>${this.Nickname}</h3>
           </div>
-          <h3>${this.Nickname}</h3>
-          <img id="logo" src="https://white.logodownload.org/wp-content/uploads/2020/11/google-white-logo.png">
+          <img id="logo" src="https://i.imgur.com/lvK6X2s.png">
           <form id="search-form">
             <input type="text" name="search" placeholder="Search...">
           </form>
