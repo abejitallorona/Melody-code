@@ -1,4 +1,3 @@
-// indexabuelo.ts
 import { Profiles } from './data/dataProfiles';
 import styles from './indexAbuelo.css';
 import './components/indexPadre';
@@ -7,7 +6,7 @@ import { WelcomeMessage, Attribute1 } from './components/welcomeMessage/welcomeM
 import { Review, Attribute2 } from './components/review-card/review-card';
 import { Reviews } from './data/dataReviews';
 import { Albums } from './data/dataAlbums';
-import { Albumslog, Attribute3 } from './components/albums/albums'; // <--- Importa Albumslog y Attribute3
+import { Albumslog, Attribute3 } from './components/albums/albums';
 
 // Crear el App container
 class AppContainer extends HTMLElement {
@@ -56,13 +55,11 @@ class AppContainer extends HTMLElement {
 
 			this.Review.push(reviewCard);
 		});
-
 		// Crear el componente Albumslog
 		Albums.forEach((album) => {
 			const albumcard = this.ownerDocument.createElement('my-albums') as Albumslog;
 
 			// Establecer los atributos del componente
-			// albumcard.setAttribute('albumCover', album.albumCover);
 			albumcard.albumCover = album.albumCover;
 			albumcard.setAttribute('views', String(album.views));
 			albumcard.setAttribute('likes', String(album.likes));
@@ -81,16 +78,46 @@ class AppContainer extends HTMLElement {
 			this.banner.forEach((banner) => {
 				this.shadowRoot?.appendChild(banner);
 			});
+
 			// Agregar el componente WelcomeMessage al shadowRoot
 			this.shadowRoot.appendChild(this.welcomeMessage);
+
 			// Agregar el componente Review al shadowRoot
-			this.Review.forEach((review) => {
+			this.Review.forEach((review, index) => {
 				this.shadowRoot?.appendChild(review);
+
+				// Agregar una línea al final de todos los componentes de Review
+				if (index === this.Review.length - 1) {
+					const hrReviewFinal = document.createElement('hr');
+					hrReviewFinal.classList.add('separator-line');
+					this.shadowRoot?.appendChild(hrReviewFinal);
+				}
 			});
+
+			// Crear el texto "Popular Albums this week"
+			const popularAlbumsText = document.createElement('h4');
+			popularAlbumsText.textContent = 'Popular Albums this week';
+			popularAlbumsText.classList.add('popular-albums-text');
+			this.shadowRoot?.appendChild(popularAlbumsText);
+
 			// Agregar el componente Albumslog al shadowRoot
 			this.Albumslog.forEach((album) => {
 				this.shadowRoot?.appendChild(album);
 			});
+
+			// Agregar el texto "powered by Spotify"
+			const poweredByText = document.createElement('p');
+			poweredByText.textContent = 'Powered by Spotify';
+			poweredByText.classList.add('powered-by-text');
+			this.shadowRoot?.appendChild(poweredByText);
+
+			// Agregar la imagen del logo de Spotify
+			const spotifyLogoImg = document.createElement('img');
+			spotifyLogoImg.src =
+				'https://static.vecteezy.com/system/resources/previews/023/986/494/original/spotify-logo-spotify-logo-transparent-spotify-icon-transparent-free-free-png.png';
+			spotifyLogoImg.alt = 'Spotify Logo';
+			spotifyLogoImg.classList.add('spotify-logo');
+			this.shadowRoot?.appendChild(spotifyLogoImg);
 		}
 	}
 }
