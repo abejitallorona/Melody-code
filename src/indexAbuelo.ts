@@ -79,6 +79,9 @@ class AppContainer extends HTMLElement {
 			//Elemento container que va a contener los componentes
 			const container = this.ownerDocument.createElement('main');
 			container.className = 'container';
+			//crear caja con albumes (vacía)
+			const albumContainer = this.ownerDocument.createElement('article');
+			albumContainer.className = 'album-container';
 
 			// Agregar el componente Banner al container
 			this.banner.forEach((banner) => {
@@ -108,8 +111,10 @@ class AppContainer extends HTMLElement {
 
 			// Agregar el componente Albumslog al container
 			this.Albumslog.forEach((album) => {
-				container.appendChild(album);
+				albumContainer.appendChild(album);
 			});
+			//meter la caja albumcontainer al conetenedo general
+			container.appendChild(albumContainer);
 
 			//agregar el container con todo al shadowroot
 			this.shadowRoot.appendChild(container);

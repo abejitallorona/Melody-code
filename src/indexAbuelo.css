@@ -23,3 +23,14 @@
 	font-weight: normal;
 	padding: 1rem 4rem 0 4rem;
 }
+
+.album-container {
+	display: flex;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	overflow: auto;
+	width: 1000px;
+	margin: auto;
+	color: white;
+}
