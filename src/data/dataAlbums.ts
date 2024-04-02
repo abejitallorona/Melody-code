@@ -20,4 +20,24 @@ export const Albums: AlbumsShape[] = [
 		views: '68',
 		likes: '37',
 	},
+	{
+		albumCover: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png',
+		views: '68',
+		likes: '37',
+	},
+	{
+		albumCover: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png',
+		views: '68',
+		likes: '37',
+	},
+	{
+		albumCover: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png',
+		views: '68',
+		likes: '37',
+	},
+	{
+		albumCover: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Ariana_Grande_-_Eternal_Sunshine.png',
+		views: '68',
+		likes: '37',
+	},
 ];

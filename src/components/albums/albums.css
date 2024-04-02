@@ -1,26 +1,32 @@
-/* Estilos para el componente Albumslog */
-.popular__albums {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	text-align: center;
+* {
+	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
+	margin: 0;
 }
 
-/* Estilos para la foto del álbum */
+.popular_albums {
+	display: inline-block; /* Mostrar los álbumes en línea para que queden uno al lado del otro */
+	margin-right: 20px; /* Añadir un margen derecho entre los álbumes */
+}
+
+.popular_albums:last-child {
+	margin-right: 0; /* Quitar el margen derecho del último álbum para evitar un espacio adicional */
+}
+
 .Album-Cover {
-	width: 200px; /* Ajusta el ancho según sea necesario */
-	height: auto; /* Mantén la relación de aspecto */
-	margin-bottom: 10px;
+	width: 200px; /* Establecer un ancho fijo para las portadas de los álbumes */
+	height: auto; /* Mantener la proporción de aspecto de las imágenes */
 }
 
-/* Estilos para los números de vistas y likes */
-.Album-Stats {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.albums-bottom-icons {
+	display: flex; /* Utilizar flexbox para alinear los iconos de vistas y likes */
+	align-items: center; /* Centrar verticalmente los iconos y los números */
 }
 
-/* Estilos para los iconos de ojos y corazones */
-.Album-Icon {
-	margin-right: 5px;
+.albums-bottom-icons > div {
+	display: flex; /* Utilizar flexbox para alinear el icono y el número horizontalmente */
+	margin-right: 10px; /* Añadir un margen derecho entre los iconos y los números */
+}
+
+.albums-bottom-icons > div:last-child {
+	margin-right: 0; /* Quitar el margen derecho del último elemento para evitar un espacio adicional */
 }
