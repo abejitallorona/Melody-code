@@ -8,6 +8,17 @@
 	color: white;
 }
 
+@media screen and (max-width: 400px) {
+	.review__card {
+		width: 300px;
+		flex-direction: column;
+	}
+
+	.Album-Picture {
+		width: 100px;
+	}
+}
+
 .Album-Picture {
 	width: 280px;
 	height: auto;
