@@ -102,7 +102,7 @@ class AppContainer extends HTMLElement {
 
 			// Crear el texto "Popular Albums this week" y agregar al container
 			const popularAlbumsText = document.createElement('h4');
-			popularAlbumsText.textContent = 'Popular Albums this week';
+			popularAlbumsText.textContent = 'POPULAR ALBUMS THIS WEEK';
 			popularAlbumsText.classList.add('popular-albums-text');
 			container.appendChild(popularAlbumsText);
 
@@ -110,20 +110,6 @@ class AppContainer extends HTMLElement {
 			this.Albumslog.forEach((album) => {
 				container.appendChild(album);
 			});
-
-			// Agregar el texto "powered by Spotify" al container
-			const poweredByText = document.createElement('p');
-			poweredByText.textContent = 'Powered by Spotify';
-			poweredByText.classList.add('powered-by-text');
-			container.appendChild(poweredByText);
-
-			// Agregar la imagen del logo de Spotify al container
-			const spotifyLogoImg = document.createElement('img');
-			spotifyLogoImg.src =
-				'https://static.vecteezy.com/system/resources/previews/023/986/494/original/spotify-logo-spotify-logo-transparent-spotify-icon-transparent-free-free-png.png';
-			spotifyLogoImg.alt = 'Spotify Logo';
-			spotifyLogoImg.classList.add('spotify-logo');
-			container.appendChild(spotifyLogoImg);
 
 			//agregar el container con todo al shadowroot
 			this.shadowRoot.appendChild(container);

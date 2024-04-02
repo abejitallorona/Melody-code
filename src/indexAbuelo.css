@@ -3,3 +3,23 @@
 	width: 100%;
 	overflow-y: auto;
 }
+.separator-line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 2px;
+	background-color: #ff4079;
+	margin-bottom: 50px;
+	margin-left: 80px;
+	border: none;
+}
+
+.popular-albums-text {
+	font-family: 'Fredoka One', sans-serif;
+	font-weight: 100;
+	color: antiquewhite;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 1rem 4rem 0 4rem;
+}
