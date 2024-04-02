@@ -59,38 +59,3 @@
 	border: none;
 	border-radius: 20px;
 }
-
-/* Media query para pantallas de 320px */
-@media screen and (max-width: 320px) {
-	.user {
-		display: flex;
-		flex-direction: column; /* Cambiar la dirección del flexbox a columna */
-		align-items: center;
-		justify-content: center;
-		margin-top: 5px; /* Añadir margen superior para separar la imagen y el nombre */
-	}
-
-	.Profile-Picture {
-		height: 20px; /* Reducir el tamaño de la imagen de perfil */
-		width: 20px;
-	}
-
-	.top-banner h3 {
-		font-size: 0.5rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
-	}
-
-	#logo {
-		height: 30px; /* Reducir el tamaño del logo para pantallas de 320px */
-	}
-
-	#search-form input[type='text'] {
-		padding: 5px; /* Reducir el padding del input para pantallas pequeñas */
-		font-size: 0.5rem; /* Reducir el tamaño de fuente del input para pantallas pequeñas */
-		width: 50%; /* Reducir el ancho del input para pantallas pequeñas */
-		height: 15px; /* Reducir la altura del input para pantallas pequeñas */
-	}
-
-	.top-banner {
-		height: 60px; /* Ajustar la altura del banner para pantallas de 320px */
-	}
-}

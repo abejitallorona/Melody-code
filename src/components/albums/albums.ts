@@ -1,4 +1,5 @@
 import styles from './albums.css';
+import { Albums } from '../../data/dataAlbums';
 export enum Attribute3 {
 	'albumCover' = 'albumCover',
 	'views' = 'views',
@@ -52,7 +53,7 @@ export class Albumslog extends HTMLElement {
 			${styles}
 		</style>
 
-		<section class="popular_albums">
+		 		<section class="popular_albums">
 		<img class="Album-Cover" src="${this.albumCover}" alt="Album Cover">
 		<div class="albums-bottom-icons">
 				<div>
@@ -65,7 +66,6 @@ export class Albumslog extends HTMLElement {
 				</div>
 		</div>
 </section>
-
           `;
 		}
 	}
