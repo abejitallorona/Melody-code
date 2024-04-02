@@ -1,6 +1,21 @@
 * {
-	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
-	margin: 0;
+	font-family: 'Fredoka One', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+	.top-banner {
+		height: 20px;
+	}
+	.user {
+		font-size: 8px;
+	}
+	#logo img {
+		width: 20px;
+	}
+
+	#search-form input[type='text'] {
+		display: none;
+	}
 }
 
 .top-banner {
@@ -10,8 +25,7 @@
 	background: linear-gradient(140deg, #ff4079 21.7%, #ffd5ad 78.56%);
 	padding: 10px;
 	height: 50px;
-	max-width: 100%; /* Asegurar que el ancho máximo del banner sea el 100% del contenedor */
-	box-sizing: border-box; /* Incluir el padding en el ancho total del banner */
+	border-radius: 0 0 10px 10px;
 }
 
 .user {
@@ -31,8 +45,8 @@
 }
 
 .top-banner h3 {
-	font-size: 1rem; /* Tamaño de fuente más pequeño */
-	color: #2b0a24; /* Color del texto */
+	font-size: 1rem;
+	color: #2b0a24;
 }
 
 #logo {

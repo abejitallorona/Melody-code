@@ -1,32 +1,29 @@
-* {
-	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
-	margin: 0;
-}
-
 .popular_albums {
-	display: inline-block; /* Mostrar los álbumes en línea para que queden uno al lado del otro */
-	margin-right: 20px; /* Añadir un margen derecho entre los álbumes */
+	width: 200px;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
-.popular_albums:last-child {
-	margin-right: 0; /* Quitar el margen derecho del último álbum para evitar un espacio adicional */
+.albums__img,
+.album__icons {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.albums__img {
+	margin-right: 10px;
 }
 
 .Album-Cover {
-	width: 200px; /* Establecer un ancho fijo para las portadas de los álbumes */
-	height: auto; /* Mantener la proporción de aspecto de las imágenes */
+	width: 100px;
+	height: auto;
 }
 
-.albums-bottom-icons {
-	display: flex; /* Utilizar flexbox para alinear los iconos de vistas y likes */
-	align-items: center; /* Centrar verticalmente los iconos y los números */
+.album__icons svg {
+	width: 20px;
+	height: auto;
 }
 
-.albums-bottom-icons > div {
-	display: flex; /* Utilizar flexbox para alinear el icono y el número horizontalmente */
-	margin-right: 10px; /* Añadir un margen derecho entre los iconos y los números */
-}
-
-.albums-bottom-icons > div:last-child {
-	margin-right: 0; /* Quitar el margen derecho del último elemento para evitar un espacio adicional */
+.album__icons p {
+	margin-left: 5px;
 }

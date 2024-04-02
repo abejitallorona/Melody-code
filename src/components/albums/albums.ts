@@ -52,8 +52,7 @@ export class Albumslog extends HTMLElement {
 			<style>
 			${styles}
 		</style>
-
-		 		<section class="popular_albums">
+		<section class="popular_albums">
 		<img class="Album-Cover" src="${this.albumCover}" alt="Album Cover">
 		<div class="albums-bottom-icons">
 				<div>
