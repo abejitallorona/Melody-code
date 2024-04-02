@@ -2,6 +2,7 @@
 	background-color: #2b0a24;
 	width: 100%;
 	overflow-y: auto;
+	padding-bottom: 40px;
 }
 .separator-line {
 	display: flex;
@@ -26,17 +27,17 @@
 
 .album-container {
 	display: flex;
-
 	padding-bottom: 5px;
 	overflow: auto;
-	width: 1000px;
+	width: 1500px;
 	margin: auto;
 	color: white;
 }
 
 ::-webkit-scrollbar {
 	width: 5px;
-	margin-bottom: 20px;
+	height: 5px;
+	margin-bottom: 50px;
 }
 
 ::-webkit-scrollbar-track {
