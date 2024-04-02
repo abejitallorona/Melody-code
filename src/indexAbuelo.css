@@ -23,3 +23,29 @@
 	font-weight: normal;
 	padding: 1rem 4rem 0 4rem;
 }
+
+.album-container {
+	display: flex;
+
+	padding-bottom: 5px;
+	overflow: auto;
+	width: 1000px;
+	margin: auto;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	margin-bottom: 20px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(140deg, #ff4079 21.7%, #ffd5ad 78.56%);
+
+	border-radius: 80px;
+}

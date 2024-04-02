@@ -1,7 +1,32 @@
+* {
+	margin-bottom: 0;
+	padding: 0;
+	font-family: 'fredoka';
+	font-size: 14px;
+}
+
 .popular_albums {
-	width: 200px;
+	width: 270px;
 	white-space: nowrap;
 	overflow-x: auto;
+	padding: 0.5rem;
+	border-radius: 15px;
+	scroll-behavior: smooth;
+	margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f2e3e3;
+	border-radius: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(255, 255, 255);
+	border-radius: 65px;
 }
 
 .albums__img,
@@ -9,19 +34,39 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.icons--svg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.Album-Cover img {
+	height: 120px;
+	margin-bottom: 10px;
+}
 
-.albums__img {
-	margin-right: 10px;
+.Album-Cover {
+	margin: 10px;
+}
+
+.popular_albums img {
+	height: 250px;
+	width: auto;
+	border-radius: 15px;
 }
 
 .Album-Cover {
 	width: 100px;
 	height: auto;
 }
-
-.album__icons svg {
-	width: 20px;
-	height: auto;
+.albums-bottom-icons {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+.albums-bottom-icons svg {
+	height: 18px;
 }
 
 .album__icons p {
