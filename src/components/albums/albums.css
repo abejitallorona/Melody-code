@@ -1,32 +1,29 @@
-* {
-	font-family: 'Fredoka One', sans-serif; /* Aplicar la tipografía "Fredoka One" al componente */
-	margin: 0;
-}
-
 .popular_albums {
-	display: inline-block; /* Mostrar los álbumes en línea para que queden uno al lado del otro */
-	margin-right: 20px; /* Añadir un margen derecho entre los álbumes */
+	width: 200px;
+	white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
+	overflow-x: auto; /* Agrega scroll horizontal si los elementos exceden el ancho del contenedor */
 }
 
-.popular_albums:last-child {
-	margin-right: 0; /* Quitar el margen derecho del último álbum para evitar un espacio adicional */
+.albums__img,
+.album__icons {
+	display: inline-block; /* Muestra los elementos en línea */
+	vertical-align: top; /* Alinea los elementos en la parte superior */
+}
+
+.albums__img {
+	margin-right: 10px; /* Agrega espacio entre los elementos */
 }
 
 .Album-Cover {
-	width: 200px; /* Establecer un ancho fijo para las portadas de los álbumes */
-	height: auto; /* Mantener la proporción de aspecto de las imágenes */
+	width: 100px; /* Establece el ancho de la imagen */
+	height: auto; /* Altura automática para mantener la proporción */
 }
 
-.albums-bottom-icons {
-	display: flex; /* Utilizar flexbox para alinear los iconos de vistas y likes */
-	align-items: center; /* Centrar verticalmente los iconos y los números */
+.album__icons svg {
+	width: 20px; /* Establece el ancho de los íconos */
+	height: auto; /* Altura automática para mantener la proporción */
 }
 
-.albums-bottom-icons > div {
-	display: flex; /* Utilizar flexbox para alinear el icono y el número horizontalmente */
-	margin-right: 10px; /* Añadir un margen derecho entre los iconos y los números */
-}
-
-.albums-bottom-icons > div:last-child {
-	margin-right: 0; /* Quitar el margen derecho del último elemento para evitar un espacio adicional */
+.album__icons p {
+	margin-left: 5px; /* Agrega espacio entre el ícono y el número */
 }
