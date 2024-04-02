@@ -1,29 +1,29 @@
 .popular_albums {
 	width: 200px;
-	white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
-	overflow-x: auto; /* Agrega scroll horizontal si los elementos exceden el ancho del contenedor */
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
 .albums__img,
 .album__icons {
-	display: inline-block; /* Muestra los elementos en línea */
-	vertical-align: top; /* Alinea los elementos en la parte superior */
+	display: inline-block;
+	vertical-align: top;
 }
 
 .albums__img {
-	margin-right: 10px; /* Agrega espacio entre los elementos */
+	margin-right: 10px;
 }
 
 .Album-Cover {
-	width: 100px; /* Establece el ancho de la imagen */
-	height: auto; /* Altura automática para mantener la proporción */
+	width: 100px;
+	height: auto;
 }
 
 .album__icons svg {
-	width: 20px; /* Establece el ancho de los íconos */
-	height: auto; /* Altura automática para mantener la proporción */
+	width: 20px;
+	height: auto;
 }
 
 .album__icons p {
-	margin-left: 5px; /* Agrega espacio entre el ícono y el número */
+	margin-left: 5px;
 }
