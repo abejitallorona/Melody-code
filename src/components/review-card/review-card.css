@@ -8,17 +8,6 @@
 	color: white;
 }
 
-@media screen and (max-width: 400px) {
-	.review__card {
-		width: 300px;
-		flex-direction: column;
-	}
-
-	.Album-Picture {
-		width: 100px;
-	}
-}
-
 .Album-Picture {
 	width: 280px;
 	height: auto;
@@ -100,4 +89,73 @@
 	color: rgb(61, 45, 45);
 	cursor: pointer;
 	margin-right: 5px;
+}
+@media screen and (max-width: 400px) {
+	.review__card {
+		width: 280px;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+
+	.Album-Picture {
+		width: 90%;
+		max-width: 280px;
+		height: auto;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.card__review {
+		text-align: justify;
+		font-size: 10px;
+	}
+
+	.card--user {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-bottom: 5px;
+	}
+
+	.User-Picture {
+		margin-bottom: 5px;
+		height: 40px;
+		width: 40px;
+		border: 3px solid #ff4079;
+		border-radius: 50%;
+	}
+
+	.card--user p {
+		font-family: 'Fredoka One', sans-serif;
+		margin: 0;
+	}
+
+	.card--title {
+		text-align: center;
+		margin-left: 0;
+		font-size: 13px;
+	}
+
+	.card--title .title--type {
+		margin: 10px 0;
+		font-size: 13px;
+	}
+
+	.card--review {
+		margin: 0;
+		font-weight: 300;
+	}
+
+	.card--like {
+		margin-left: 0;
+		text-align: center;
+	}
+	.card--title .title--type {
+		font-size: 10px;
+		height: 10px;
+	}
 }

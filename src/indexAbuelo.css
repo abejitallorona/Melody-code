@@ -50,3 +50,11 @@
 
 	border-radius: 80px;
 }
+@media screen and (max-width: 400px) {
+	.popular-albums-text {
+		font-size: 10px;
+	}
+	.album-container {
+		width: 280px;
+	}
+}

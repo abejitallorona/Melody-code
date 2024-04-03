@@ -2,22 +2,6 @@
 	font-family: 'Fredoka One', sans-serif;
 }
 
-@media screen and (max-width: 500px) {
-	.top-banner {
-		height: 20px;
-	}
-	.user {
-		font-size: 8px;
-	}
-	#logo img {
-		width: 20px;
-	}
-
-	#search-form input[type='text'] {
-		display: none;
-	}
-}
-
 .top-banner {
 	display: flex;
 	align-items: center;
@@ -26,6 +10,8 @@
 	padding: 10px;
 	height: 50px;
 	border-radius: 0 0 10px 10px;
+	display: flex;
+	align-items: center;
 }
 
 .user {
@@ -55,8 +41,8 @@
 	justify-content: center;
 	height: 65px;
 	margin-top: 8px;
-	max-width: 100%; /* Asegurar que el ancho máximo del logo sea el 100% del contenedor */
-	box-sizing: border-box; /* Incluir el padding en el ancho total del logo */
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 #search-form {
@@ -72,4 +58,37 @@
 	padding: 8px;
 	border: none;
 	border-radius: 20px;
+}
+
+@media (max-width: 320px) {
+	.top-banner {
+		padding: 0.2em;
+		height: 40px;
+	}
+
+	.Profile-Picture {
+		height: 30px;
+		width: 30px;
+		border: 1px solid #ffd5ad;
+		margin: 0.2em;
+	}
+
+	.top-banner h3 {
+		font-size: 0.5rem;
+	}
+
+	#logo {
+		height: 30px;
+		margin-top: 3px;
+	}
+
+	#search-form {
+		margin-left: 3px;
+	}
+
+	#search-form input[type='text'] {
+		padding: 3px;
+		border-radius: 10px;
+		font-size: 0.4rem;
+	}
 }

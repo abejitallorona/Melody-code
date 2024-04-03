@@ -23,7 +23,7 @@ export const Reviews: ReviewsShape[] = [
 		comments: 236,
 	},
 	{
-		nameAndArtist: 'Eternal Sunshine-Ariana Grande',
+		nameAndArtist: 'Eternal Sunshine-Ariana G',
 		typeAndYear: 'Album-2024',
 		albumPicture: 'https://chhsnews.com/wp-content/uploads/2024/03/IMG_2587.jpg',
 		userPicture:

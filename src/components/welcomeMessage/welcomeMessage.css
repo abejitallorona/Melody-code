@@ -1,6 +1,6 @@
 * {
 	font-family: 'Fredoka One', sans-serif;
-	font-weight: 100;
+	font-weight: 50;
 	color: antiquewhite;
 }
 
@@ -48,4 +48,38 @@
 	background-color: #ff4079;
 	margin-bottom: 50px;
 	margin-left: 80px;
+}
+
+@media (max-width: 320px) {
+	* {
+		font-weight: 300;
+	}
+	.message__user {
+		padding-top: 15px;
+		font-size: 7px;
+		padding: 5px;
+	}
+
+	.additional-content {
+		margin-top: 8px;
+		padding: 0.5rem 2rem 0 2rem;
+	}
+
+	.additional-content p {
+		font-size: 7px;
+		font-weight: 100;
+	}
+
+	#add-entry-button {
+		padding: 8px;
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+
+	.bottom-line {
+		margin-bottom: 30px;
+		width: 80%;
+		display: flex;
+		align-items: center;
+	}
 }
